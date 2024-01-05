@@ -1,0 +1,65 @@
+{
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "beforeBuildCommand": "pnpm build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "tauri-window-bug",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.dev",
+      "icon": [
+        "icons/32x32.png",
+        "icons/128x128.png",
+        "icons/128x128@2x.png",
+        "icons/icon.icns",
+        "icons/icon.ico"
+      ]
+    },
+    "security": {
+      "csp": null
+    },
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "resizable": true,
+        "transparent": true,
+        "decorations": false,
+        "alwaysOnTop": true,
+        "title": "Window 1",
+        "width": 400,
+        "height": 400,
+        "x": 0,
+        "y": 0,
+        "minHeight": 106,
+        "minWidth": 64
+      },
+      {
+        "transparent": true,
+        "decorations": true,
+        "alwaysOnTop": true,
+        "label": "settings",
+        "url": "#settings",
+        "title": "Window 2",
+        "visible": false,
+        "width": 400,
+        "height": 400,
+        "x": 0,
+        "y": 500
+      }
+    ]
+  }
+}
